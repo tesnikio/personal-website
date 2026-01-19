@@ -1,0 +1,131 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ThemeToggleIsland from "@/components/ThemeToggleIsland";
+import LocationTime from "@/components/LocationTime";
+import { Mail, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
+import softlaneLogoBlack from "@/assets/full logo black.svg";
+import softlaneLogoWhite from "@/assets/full logo white.svg";
+
+const year = new Date().getFullYear();
+---
+
+<BaseLayout title="Nikita Teslyuk">
+  <div class="min-h-screen flex flex-col">
+    <header class="fixed top-0 right-0 p-4 sm:p-6 z-50">
+      <ThemeToggleIsland client:load />
+    </header>
+
+    <main class="flex-1 py-20 sm:py-28 md:py-36">
+      <div class="portfolio-container">
+        <section class="animate-fade-in">
+          <h1 class="hero-name">Nikita Teslyuk</h1>
+          <p class="hero-subtitle">AI/Software Engineer, Entrepreneur, Builder</p>
+          <p class="hero-tagline">
+            Crafting thoughtful digital experiences that resonate.
+          </p>
+          <LocationTime client:load />
+        </section>
+
+        <section class="mt-16 sm:mt-20 animate-fade-in-delay">
+          <p class="section-text">
+            I’m an AI and Software Engineer, entrepreneur, and builder focused on
+            creating scalable, efficient systems that drive real-world impact.
+            I’ve worked across software and machine learning, from web and mobile
+            applications to AI systems in computer vision, speech, and NLP.
+          </p>
+          <p class="section-text mt-6">
+            I enjoy owning problems end to end, from idea to execution, and
+            building products that compound over time. Outside of work, I stay
+            active, follow football and tennis, and draw inspiration from travel
+            and new environments.
+          </p>
+        </section>
+
+        <section class="mt-12 sm:mt-16 animate-fade-in-delay">
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="mailto:teslyuk.nikita@gmail.com" class="cta-button">
+              Get in touch
+            </a>
+            <a
+              href="https://softlane.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cta-button h-[52px] px-8 py-0 justify-center"
+              aria-label="Visit Softlane Studio"
+            >
+              <img
+                src={softlaneLogoWhite.src}
+                alt=""
+                class="h-full w-auto dark:hidden scale-[1.6] origin-center"
+                loading="lazy"
+              />
+              <img
+                src={softlaneLogoBlack.src}
+                alt=""
+                class="h-full w-auto hidden dark:block scale-[1.6] origin-center"
+                loading="lazy"
+              />
+            </a>
+          </div>
+        </section>
+
+        <section class="mt-16 sm:mt-20 animate-fade-in-delay-2">
+          <nav class="flex flex-wrap gap-x-6 gap-y-3 text-base">
+            <a
+              href="mailto:teslyuk.nikita@gmail.com"
+              class="social-link inline-flex items-center gap-2"
+            >
+              <Mail class="w-4 h-4" />
+              <span>Email</span>
+            </a>
+            <a
+              href="https://instagram.com/tesnik"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link inline-flex items-center gap-2"
+            >
+              <Instagram class="w-4 h-4" />
+              <span>Instagram</span>
+            </a>
+            <a
+              href="https://x.com/NikitaTeslyuk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link inline-flex items-center gap-2"
+            >
+              <Twitter class="w-4 h-4" />
+              <span>X / Twitter</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@nikitateslyuk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link inline-flex items-center gap-2"
+            >
+              <Youtube class="w-4 h-4" />
+              <span>YouTube</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nikitateslyuk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link inline-flex items-center gap-2"
+            >
+              <Linkedin class="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
+          </nav>
+        </section>
+      </div>
+    </main>
+
+    <footer class="py-8 sm:py-10">
+      <div class="portfolio-container">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <p class="footer-text">© {year} Nikita Teslyuk. All rights reserved.</p>
+          <p class="footer-text">@tesnik</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>

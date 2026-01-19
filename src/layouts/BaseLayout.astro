@@ -1,0 +1,27 @@
+---
+import "../index.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Nikita Teslyuk" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.ico`} />
+    <title>{title}</title>
+    <script is:inline>
+      const hour = new Date().getHours();
+      const shouldBeDark = hour >= 18 || hour < 8;
+      document.documentElement.classList.toggle("dark", shouldBeDark);
+    </script>
+  </head>
+  <body class="min-h-screen">
+    <slot />
+  </body>
+</html>
