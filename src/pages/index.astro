@@ -3,8 +3,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ThemeToggleIsland from "@/components/ThemeToggleIsland";
 import LocationTime from "@/components/LocationTime";
 import { Mail, Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
-import softlaneLogoBlack from "@/assets/full logo black.svg";
-import softlaneLogoWhite from "@/assets/full logo white.svg";
 
 const year = new Date().getFullYear();
 ---
@@ -47,24 +45,12 @@ const year = new Date().getFullYear();
               💬 Get in touch
             </a>
             <a
-              href="https://softlane.studio"
+              href="https://trypaperclip.app/"
               target="_blank"
               rel="noopener noreferrer"
-              class="cta-button h-[52px] px-8 py-0 justify-center"
-              aria-label="Visit Softlane Studio"
+              class="cta-button"
             >
-              <img
-                src={softlaneLogoWhite.src}
-                alt=""
-                class="h-full w-auto dark:hidden scale-[1.6] origin-center"
-                loading="lazy"
-              />
-              <img
-                src={softlaneLogoBlack.src}
-                alt=""
-                class="h-full w-auto hidden dark:block scale-[1.6] origin-center"
-                loading="lazy"
-              />
+              📎 Get Paperclip
             </a>
           </div>
         </section>
